@@ -1,0 +1,2 @@
+# SDK Error Collection
+
