@@ -23,12 +23,12 @@ This procedure is intended for testing terminals only and outlines the steps for
     <figure><img src="../../.gitbook/assets/image (108).png" alt=""><figcaption></figcaption></figure>
 
     * Important Note: This step will change the terminal's owner to a test owner.&#x20;
-4.  Key Loader Client Agent Installation:
+4.  Key Loader Client APK Installation:
 
-    * Obtain and install the [key loader client agent](https://ftp.wizarpos.com/advanceSDK/injectkeydemo-release-202406201106_release_by_pengli.apk) on your terminal.
-    * Run the agent to inject the keys into the terminal. Select the corresponding key button. For example: If injecting the Master Key, select the REQUEST INJECT MASTER KEY button.
+    * Obtain and install the [key loader client ](https://ftp.wizarpos.com/advanceSDK/injectkeydemo_260427.apk)on your terminal.
+    * Run the APK to inject the keys into the terminal. Select the corresponding key button. For example: If injecting the Master Key, select the REQUEST INJECT MASTER KEY button.
 
-    <figure><img src="../../.gitbook/assets/image (109).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (117).png" alt=""><figcaption></figcaption></figure>
 
 Note:
 
