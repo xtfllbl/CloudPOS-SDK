@@ -10,7 +10,7 @@ To ensure optimal performance and compatibility, it is essential to use the late
 
 | Version  | Download                                                                                    | Release Time |
 | -------- | ------------------------------------------------------------------------------------------- | ------------ |
-| 1.8.2.9  | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.2.9_Standard.aar)   | 2026-04-07   |
+| 1.8.2.11 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.2.11_Standard.aar)  | 2026-04-29   |
 | 1.8.1.11 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.1.11_Standard.aar)  | 2026-02-10   |
 | 1.7.7.18 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.7.7.18_Standard.aar)  | 2026-01-12   |
 | 1.7.7.13 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.7.7.13_Standard.aar)  | 2025-12-23   |
@@ -58,13 +58,16 @@ The CloudPOS SDK AAR version number follows the format: Major.Minor.Stage.Build.
 
 ### Change History
 
-**1.8.2.9**
+**1.8.2.11**
 
 * **Add virtual serial port names: SERIAL\_VP\_0 and SERIAL\_VP\_1.**
 * **Add the setDefaultLauncher method for the Q3 series above Android 12.**
 * **Add separate methods for controlling the on and off states of the relay in the extboard.**
 * **Add a logcat packaging interface.**
 * **Fix the issue of not being able to detect the removal of a contactless card.**
+* **Add an interface for actively querying whether the terminal has exceeded the boundary (related to electronic fences) - requestGeofenceBroadcast method.**
+* **The Ethernet sharing function of Q3Bu cannot be used.**
+* **The open method implemented by SystemAdvanceDevice occasionally fails.**
 
 **1.8.1.11**
 
