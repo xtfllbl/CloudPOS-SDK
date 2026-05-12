@@ -12,6 +12,7 @@ To ensure optimal performance and compatibility, it is essential to use the late
 
 | Version  | Download                                                                                    | Release Time |
 | -------- | ------------------------------------------------------------------------------------------- | ------------ |
+| 1.8.2.12 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.2.12_Standard.aar)  | 2026-05-12   |
 | 1.8.2.11 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.2.11_Standard.aar)  | 2026-04-29   |
 | 1.8.1.11 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.1.11_Standard.aar)  | 2026-02-10   |
 | 1.7.7.18 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.7.7.18_Standard.aar)  | 2026-01-12   |
@@ -59,6 +60,11 @@ Note: For older versions, please contact WizarPOS.&#x20;
 The CloudPOS SDK AAR version number follows the format: Major.Minor.Stage.Build. The main version is updated for architectural changes, the minor version annually, the stage version monthly, and the build version for feature additions or bug fixes.
 
 ### Change History
+
+**1.8.2.12**
+
+* **Add trigerpulse supports microseconds.**
+* **Add version verification of AgentAssistant App**
 
 **1.8.2.11**
 
