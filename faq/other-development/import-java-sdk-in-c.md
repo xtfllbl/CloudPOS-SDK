@@ -9,6 +9,10 @@ We have transformed the SDK, originally an Android Archive (AAR) file, into a Dy
 * Current Demo Version: The demo uses a DLL converted from the AAR package of version 1.5.4.82.
 * Version Updates: If there's a need to update to a newer version during development, please contact WizarPOS support for assistance.
 
+#### History:
+
+1. [DLL based on 1.8.2.14](https://ftp.wizarpos.com/device/java/CloudPOSBinding.dll)
+
 ### Additional Information
 
 * Binding an AAR in Xamarin: For guidance on how to bind an .AAR file in Xamarin, refer to the Microsoft documentation available at [Binding an AAR](https://learn.microsoft.com/en-us/xamarin/android/platform/binding-java-library/binding-an-aar).
