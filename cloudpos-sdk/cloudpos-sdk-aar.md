@@ -62,6 +62,11 @@ The CloudPOS SDK AAR version number follows the format: Major.Minor.Stage.Build.
 
 ### Change History
 
+**1.8.2.22**
+
+* **Fix the Q3 Dual customer display interface issue.**
+* **Resolve the "Out of memory" error when calling encryptWithMode.**
+
 **1.8.2.14**
 
 * **Add trigerpulse supports microseconds.**
