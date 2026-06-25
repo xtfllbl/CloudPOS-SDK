@@ -12,7 +12,7 @@ To ensure optimal performance and compatibility, it is essential to use the late
 
 | Version  | Download                                                                                    | Release Time |
 | -------- | ------------------------------------------------------------------------------------------- | ------------ |
-| 1.8.2.22 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.2.22_Standard.aar)  | 2026-06-05   |
+| 1.8.2.24 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.2.24_Standard.aar)  | 2026-06-25   |
 | 1.8.2.14 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.2.14_Standard.aar)  | 2026-05-27   |
 | 1.8.2.11 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.2.11_Standard.aar)  | 2026-04-29   |
 | 1.8.1.11 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.1.11_Standard.aar)  | 2026-02-10   |
@@ -62,10 +62,11 @@ The CloudPOS SDK AAR version number follows the format: Major.Minor.Stage.Build.
 
 ### Change History
 
-**1.8.2.22**
+**1.8.2.24**
 
 * **Fix the Q3 Dual customer display interface issue.**
 * **Resolve the "Out of memory" error when calling encryptWithMode.**
+* **Add monitoring for MDB communication interruption status**
 
 **1.8.2.14**
 
