@@ -25,14 +25,34 @@ Because remote key injection involves high-level security validation, a mutual a
 
 WizarPOS provides two core terminal AIDL (Android Interface Definition Language) interfaces for the Agent to invoke during the key injection workflow. See the [cloudPOS\_remote\_key\_injection\_demo\_system manual](https://ftp.wizarpos.com/advanceSDK/wizarPOS_remote_key_injection_demo_system_20241217.pdf) for details.
 
-```java
-    byte[] getAuthInfo();    
-    int importKeyInfo(byte[] keyInfo);   
+```
+byte[] getAuthInfo();
 ```
 
-<div align="left"><figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure></div>
+This API allows the application to retrieve the authentication information buffer from the Hardware Security Module (HSM). The structure of the returned `AuthInfo` byte array is detailed below:
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure></div>
+| **Field**      | **Length (Bytes)** | **Description**                                                                                        |
+| -------------- | ------------------ | ------------------------------------------------------------------------------------------------------ |
+| PubKeyP Length | 4                  | Little-endian integer. Represents the actual length of the contents in the subsequent `PubKeyP` field. |
+| PubKeyP        | 4096               | Fixed buffer storing the terminal public key inside a simple PEM-formatted certificate.                |
+| Random         | 32                 | Fixed random number block used for anti-replay protection.                                             |
+| SN Length      | 1                  | Represents the actual length of the contents in the subsequent `SN` field.                             |
+| SN             | 31                 | Fixed buffer storing the device Serial Number (SN).                                                    |
+| Signature      | 256                | Fixed buffer storing the cryptographic signature of the payload.                                       |
+
+```
+int importKeyInfo(in byte[] keyInfo);
+```
+
+This API allows the application to import the encrypted `KeyInfo` payload received from the Host server. The structure of the incoming `KeyInfo` byte array is detailed below:
+
+| **Field**      | **Length (Bytes)** | **Description**                                                                                                                                     |
+| -------------- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| PubKeyH Length | 4                  | Little-endian integer. Represents the actual length of the contents in the subsequent `PubKeyH` field.                                              |
+| PubKeyH        | 4096               | Fixed buffer storing the Host public key inside a simple PEM-formatted certificate.                                                                 |
+| Random         | 32                 | Fixed random number block.                                                                                                                          |
+| Cipher KeyInfo | 256                | Fixed buffer containing the ciphertext of the key data, encrypted using the POS terminal's public key. _(See plaintext payload sub-formats below)_. |
+| Signature      | 256                | Fixed buffer storing the cryptographic signature of the combined `Random` + `Cipher KeyInfo` fields.                                                |
 
 ### Scenario 2: Systems Without an Existing Host Server
 
