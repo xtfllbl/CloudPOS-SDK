@@ -2,6 +2,10 @@
 
 ## Remote Key Injection (RKI) Development Guide
 
+### Core document
+
+[cloudPOS\_remote\_key\_injection\_demo\_system manual](https://ftp.wizarpos.com/advanceSDK/wizarPOS_remote_key_injection_demo_system_20241217.pdf)
+
 ### Scenario 1: Integrating with an Existing Host Server
 
 To integrate Remote Key Injection (RKI) capabilities into an established host server, developers must implement a customized terminal-side Agent and adhere to strict certificate security requirements to establish a proper chain of trust.
@@ -23,9 +27,11 @@ Because remote key injection demands the highest tier of financial-grade securit
   * Server-Side Module Verification: Certain host servers require verification of the terminal's unique device certificate (embedded in the HSM) before distributing keys, guaranteeing that the target device is an authentic, untampered WizarPOS terminal.
 * Certificate Initialization: Given these dual-layer authentication demands, the terminal certificate initialization process is mandatory in Scenario 1. Before executing the RKI workflow, developers must ensure the terminal has successfully triggered and completed its certificate initialization so that it possesses valid hardware-level identity credentials.
 
+See the core document for details.
+
 #### **3. AIDL Interfaces**
 
-WizarPOS provides two core terminal AIDL (Android Interface Definition Language) interfaces for the Agent to invoke during the key injection workflow. See the [cloudPOS\_remote\_key\_injection\_demo\_system manual](https://ftp.wizarpos.com/advanceSDK/wizarPOS_remote_key_injection_demo_system_20241217.pdf) for details.
+WizarPOS provides two core terminal AIDL (Android Interface Definition Language) interfaces for the Agent to invoke during the key injection workflow. See the core document for details.
 
 ```
 byte[] getAuthInfo();
