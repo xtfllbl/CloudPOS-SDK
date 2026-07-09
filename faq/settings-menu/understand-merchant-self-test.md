@@ -33,7 +33,7 @@
     &#x20;      ![](<../../.gitbook/assets/image (68).png>)
 
     * PSAM Card: Test the PSAM card by powering it on and sending an APDU command: 'new byte\[]{0x00, (byte) 0x84, 0x00, 0x00, 0x08}'.
-    * TCPTool: Use this tool to establish a TCP connection to any specified address![](../../.gitbook/assets/image.png)
+    * TCPTool: Use this tool to establish a TCP connection to any specified address![](<../../.gitbook/assets/image (2).png>)
     * Button: Test the functionality of the keyboard.
     * Key Verify: Verify the integrity of the terminal's private-public key pair and owner certificate.
     * Show touches: Toggle the display of touch screen interactions with a white dot.

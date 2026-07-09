@@ -11,7 +11,7 @@
 
 #### Communication Server:
 
-* mqtt.wizarview.com \[ 129.153.221.231[![](<../../.gitbook/assets/image (2).png>)](https://www.ip2location.com/demo/129.153.221.231)]\(port 11884, 11885)
+* mqtt.wizarview.com \[ 129.153.221.231[![](<../../.gitbook/assets/image (2) (1).png>)](https://www.ip2location.com/demo/129.153.221.231)]\(port 11884, 11885)
 
 #### Download Servers:
 

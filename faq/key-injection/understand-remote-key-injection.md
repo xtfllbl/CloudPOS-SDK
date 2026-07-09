@@ -1,52 +1,56 @@
 # Understand Remote Key Injection
 
-### PCI PIN 3.1 Certified OTA Remote Key Injection Anywhere
+## Remote Key Injection (RKI) Development Guide
 
-#### Overview
+### Scenario 1: Integrating with an Existing Host Server
 
-WizarPOS has developed a Remote Key Injection (RKI) system that is PCI PIN 3.1 certified, meeting the needs for secure, remote key injection.
+To integrate Remote Key Injection (RKI) capabilities into an established host server, developers must implement a customized terminal-side Agent and adhere to strict certificate security requirements to establish a proper chain of trust.
 
-This system allows customers to inject keys into their terminals remotely and securely, particularly useful for those without their own key injection systems or a secure key injection environment.
+#### **1. Core Responsibilities of the Agent**
 
-#### Benefits of WizarPOS RKI:
+The Agent acts as a critical bridge between the host server and the terminal's secure environment, bearing the following responsibilities:
 
-* Enhanced Security: Prevents interception or manual manipulation of keys and data.
-* Cost-Effective: Reduces the need for personnel training and certification, lowering overall costs.
-* Scalability: Ideal for distributors or service providers needing to inject keys into multiple POS terminals at different locations.
-* PCI PIN 3.1 Approval: Ensures compliance with industry security standards.
+* Server Interaction: Communicates securely with the host server to request and retrieve the encrypted injection keys.
+* Key Injection: Invokes the terminal's local AIDL interfaces to safely provision and inject the retrieved keys into the underlying hardware security module (HSM).
 
-#### Key Features
+#### **2. Certificate Requirements & Initialization**
 
-* Mutual Authentication: Ensures a secure channel between devices and servers.
-* Protocol Support: Complies with TR31 and TR34 key exchange block protocols.
-* Key Type Support: Compatible with all major key types.
+Because remote key injection involves high-level security validation, a mutual authentication mechanism must be established between the terminal and the server:
 
-#### [Remote Key Injection (RKI) solution](https://ftp.wizarpos.com/advanceSDK/RemoteKeyManagementSystem.pdf)
+* Terminal-Side Verification: During the key injection process, the terminal _must_ verify the legitimacy of the incoming key certificate. This ensures the authenticity and integrity of the key source and prevents unauthorized or malicious keys from being written.
+* Server-Side Verification: Certain host servers also require validation of the terminal's device certificate before distributing keys, confirming that the requesting terminal is authentic and authorized.
+* Certificate Initialization: Given these mutual authentication demands, the terminal certificate initialization process is indispensable in Scenario 1. Before executing the RKI workflow, developers must ensure that the terminal has successfully triggered and completed its certificate initialization so that it possesses valid identity credentials.
 
-#### [RKMS Key Exchange manual](https://ftp.wizarpos.com/advanceSDK/RKMSKeyExchange.pdf)
+#### **3. AIDL Interfaces**
 
-#### [RKMS admin manual](https://ftp.wizarpos.com/advanceSDK/RKMSUserManual.pdf)(for users who can operate RKMS system)
-
-### Developing Remote Key Injection
-
-#### Integrating to Existing Host Server
-
-* For integrating with an existing host server, provide documentation on how the server works with the terminal side for customized agent adaptor development.
-* AIDL Interface: WizarPOS offers two terminal AIDL interfaces, as demonstrated in 'For Systems Without an Existing Host Server'.
+WizarPOS provides two core terminal AIDL (Android Interface Definition Language) interfaces for the Agent to invoke during the key injection workflow. See the [cloudPOS\_remote\_key\_injection\_demo\_system manual](https://ftp.wizarpos.com/advanceSDK/wizarPOS_remote_key_injection_demo_system_20241217.pdf) for details.
 
 ```java
-    int importKeyInfo(byte[] keyInfo);
-    byte[] getAuthInfo();
+    byte[] getAuthInfo();    
+    int importKeyInfo(byte[] keyInfo);   
 ```
 
-#### For Systems Without an Existing Host Server:
+<div align="left"><figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure></div>
 
-* Developing a remote key injection system from scratch is time-consuming and typically uncertified by PCI, making it suitable only for testing or internal use.
-* WizarPOS offers a remote key injection demo system for reference, including:
-  * [cloudPOS\_remote\_key\_injection\_demo\_system manual](https://ftp.wizarpos.com/advanceSDK/wizarPOS_remote_key_injection_demo_system_20241217.pdf), it describes the whole demo system, and the detail information for the certificates, core process.
-  * [Terminal APP](https://github.com/SmartPOSSamples/InjectKeyDemo.git)
-  * [Server Project](https://github.com/SmartPOSSamples/RemoteKeyInjectServer.git)
-    * _Remote\_Key\_Inject\_Deployment.docx_, it describes how to deploy and run the keyinjection jar in server.
-* The demo uses a certificate that replaces the original terminal certificate. Download the [initialize certificate APK](https://ftp.wizarpos.com/advanceSDK/init_democert_20260129.apk) and run it to initialize the demo certificate. [Clearing the demo certificate](http://sdkwiki.wizarpos.com/index.php?title=How_to_Clear_Terminal_Certificates) is necessary after use.
+<div align="left"><figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure></div>
 
-Note: While WizarPOS provides a comprehensive RKI solution, the demo system is for reference and testing purposes only. When deploying in a live environment, ensure to replace the demo certificate with a valid, secure certificate.
+### Scenario 2: Systems Without an Existing Host Server
+
+Developing a fully custom Remote Key Injection system from scratch is highly time-consuming and typically lacks the mandatory PCI compliance certification. Therefore, building a proprietary server is recommended only for internal testing or evaluation.
+
+To accelerate your development and testing phase, WizarPOS provides a comprehensive RKI Demo System for your reference, which includes the following core components:
+
+* [cloudPOS\_remote\_key\_injection\_demo\_system manual](https://ftp.wizarpos.com/advanceSDK/wizarPOS_remote_key_injection_demo_system_20241217.pdf): A comprehensive reference manual that covers the entire demo architecture, certificate management mechanisms, and core cryptographic workflows.
+* [Terminal APP](https://github.com/SmartPOSSamples/InjectKeyDemo.git) : Provides the complete reference source code for the terminal-side client.
+* [Server Project](https://github.com/SmartPOSSamples/RemoteKeyInjectServer.git)Provides the complete reference source code for the backend server.
+  * Includes `Remote_Key_Inject_Deployment.docx`: This deployment document is bundled within the server project package, providing step-by-step guidance on how to configure the server environment, deploy, and run the key-injection JAR application.
+
+**🔐 Certificate Management for Testing**
+
+The demo environment relies on a dedicated test certificate that overrides the terminal's default factory certificate:
+
+1. Certificate Initialization: Download and execute the [Certificate Initialization APK](https://ftp.wizarpos.com/advanceSDK/init_democert_20260129.apk) on the terminal to generate and provision the demo certificate.
+2. Environment Clean-up: Ensure the demo certificate is completely cleared from the terminal after testing to restore the standard secure terminal environment. Here is the c[learnup the demo certificate](http://sdkwiki.wizarpos.com/index.php?title=How_to_Clear_Terminal_Certificates) APK.
+
+> ⚠️ Production Security Warning: While WizarPOS delivers a comprehensive RKI framework, the provided demo system is strictly for sandbox testing and reference. Prior to live environment deployment, you must replace all demo certificates with valid, secure, and CA-certified production credentials.
+

@@ -172,6 +172,7 @@
     * [Understand DUKPT](faq/key-injection/understand-dukpt.md)
     * [Understand Master\&Session Keys](faq/key-injection/understand-master-and-session-keys.md)
     * [Use TMK KeyLoader POS](faq/key-injection/use-tmk-keyloader-pos.md)
+    * [RKMS](faq/key-injection/rkms.md)
     * [Understand Remote Key Injection](faq/key-injection/understand-remote-key-injection.md)
     * [Resolve Serial Timeout](faq/key-injection/resolve-serial-timeout.md)
     * [Import TMK Error: 74496](faq/key-injection/import-tmk-error-74496.md)
