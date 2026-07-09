@@ -13,13 +13,15 @@ The Agent acts as a critical bridge between the host server and the terminal's s
 * Server Interaction: Communicates securely with the host server to request and retrieve the encrypted injection keys.
 * Key Injection: Invokes the terminal's local AIDL interfaces to safely provision and inject the retrieved keys into the underlying hardware security module (HSM).
 
-#### **2. Certificate Requirements & Initialization**
+#### **2. Multi-Layered Certificate Verification & Initialization**
 
-Because remote key injection involves high-level security validation, a mutual authentication mechanism must be established between the terminal and the server:
+Because remote key injection demands the highest tier of financial-grade security, certificate validation occurs at two distinct layers—both during network transport and inside the hardware module itself:
 
-* Terminal-Side Verification: During the key injection process, the terminal _must_ verify the legitimacy of the incoming key certificate. This ensures the authenticity and integrity of the key source and prevents unauthorized or malicious keys from being written.
-* Server-Side Verification: Certain host servers also require validation of the terminal's device certificate before distributing keys, confirming that the requesting terminal is authentic and authorized.
-* Certificate Initialization: Given these mutual authentication demands, the terminal certificate initialization process is indispensable in Scenario 1. Before executing the RKI workflow, developers must ensure that the terminal has successfully triggered and completed its certificate initialization so that it possesses valid identity credentials.
+* Network Transport Layer (Mutual SSL/TLS Authentication): Before any data is exchanged, a secure, two-way SSL/TLS connection must be established between the host server and the terminal Agent. This mutual authentication ensures that the terminal is communicating with the genuine server, and the server verifies that the connection request is originating from an approved terminal application.
+* Hardware Security Layer (HSM-Level Verification): Beyond network security, the actual payloads are cryptographically validated at the hardware level:
+  * Terminal-Side HSM Verification: When injecting keys, the terminal's internal HSM strictly verifies the root/sub-CA certificate chain of the incoming host key payload. This ensures the authenticity and integrity of the key source, preventing rogue or compromised keys from being written to the secure chip.
+  * Server-Side Module Verification: Certain host servers require verification of the terminal's unique device certificate (embedded in the HSM) before distributing keys, guaranteeing that the target device is an authentic, untampered WizarPOS terminal.
+* Certificate Initialization: Given these dual-layer authentication demands, the terminal certificate initialization process is mandatory in Scenario 1. Before executing the RKI workflow, developers must ensure the terminal has successfully triggered and completed its certificate initialization so that it possesses valid hardware-level identity credentials.
 
 #### **3. AIDL Interfaces**
 
