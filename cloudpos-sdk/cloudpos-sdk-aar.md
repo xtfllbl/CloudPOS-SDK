@@ -12,6 +12,7 @@ To ensure optimal performance and compatibility, it is essential to use the late
 
 | Version  | Download                                                                                    | Release Time |
 | -------- | ------------------------------------------------------------------------------------------- | ------------ |
+| 1.8.2.26 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.2.26_Standard.aar)  | 2026-07-13   |
 | 1.8.2.24 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.2.24_Standard.aar)  | 2026-06-25   |
 | 1.8.2.14 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.2.14_Standard.aar)  | 2026-05-27   |
 | 1.8.2.11 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.2.11_Standard.aar)  | 2026-04-29   |
@@ -61,6 +62,11 @@ Note: For older versions, please contact WizarPOS.&#x20;
 The CloudPOS SDK AAR version number follows the format: Major.Minor.Stage.Build. The main version is updated for architectural changes, the minor version annually, the stage version monthly, and the build version for feature additions or bug fixes.
 
 ### Change History
+
+**1.8.2.26**
+
+* **Optimize Javadoc.**
+* **Update EMV implementation.**
 
 **1.8.2.24**
 
