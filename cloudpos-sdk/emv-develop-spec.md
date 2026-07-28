@@ -4,7 +4,7 @@ This document aims to simplify the understanding of EMV development specificatio
 
 ### EMV API
 
-<table><thead><tr><th width="246.33333333333331">Version</th><th>Download</th><th>Release Time</th></tr></thead><tbody><tr><td>4.35</td><td><a href="https://ftp.wizarpos.com/emv/EMVKernel_Android_interface_4.35(20250414).pdf">EMV kernel API</a></td><td>2025-04-14</td></tr></tbody></table>
+<table><thead><tr><th width="246.33333333333331">Version</th><th>Download</th><th>Release Time</th></tr></thead><tbody><tr><td>4.35</td><td><a href="https://ftp.wizarpos.com/emv/EMVKernel_Android_interface_4.35(20260608).pdf">EMV kernel API</a></td><td>2025-04-14</td></tr></tbody></table>
 
 ### EMV Process Flow
 
