@@ -34,7 +34,7 @@ This guide details how to access various system information on Point of Sale (PO
 | Q3mini/Q3mini-V | SHWP                    | WIZARPOS\_Q3\_mini | WIZARPOS Q3 mini             | Q3mini              | Q3mini                 |
 | Q3pda           | SHWP                    | WIZARPOS\_Q3\_pda  | WIZARPOS Q3 pda              | Q3pda               | Q3pda                  |
 | Q1K             | SHWP                    | WIZARPOS\_Q1       | WIZARPOS Q1                  | Q1k                 | Q1                     |
-| Q2Pro           |                         |                    |                              | Q1K                 | Q2pro                  |
+| Q2Pro           | SHWP                    | WIZARPOS\_Q2       | WIZARPOS Q2                  | Q1K                 | Q2pro                  |
 | Q3au            | SHWP                    | WIZARPOS\_Q3       | WIZARPOS Q3                  | Q3au                | Q3A7                   |
 | Q3pu            | SHWP                    | WIZARPOS\_Q3       | WIZARPOS Q3                  | Q3pro               | Q3pro                  |
 
