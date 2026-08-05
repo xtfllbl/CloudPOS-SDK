@@ -56,6 +56,16 @@ Suppose a C interface method returns 196609. Firstly, convert it to hex value (3
 #### Hardware Type (Byte1) Mapping:
 
 * 1: PINPAD
+* 2: SMARTCARD
+* 3: CONTACTLESS
+* 4: ESP
+* 5: PRINTER
+* 6: MSR
+* 7: HSM
+* 8: LED
+* 25: CUSTOMERDISPLAY
+* 33: FINGERPRINT
+* 35: PSAM
 
 #### Hardware Error (Byte2) Mapping:
 
