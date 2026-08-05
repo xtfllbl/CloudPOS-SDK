@@ -1,6 +1,6 @@
 # Error code
 
-### Common Error Codes
+## Common Error Codes
 
 Below is a list of common error codes that developers may encounter when working with the Android application for Smart POS devices. Understanding these error codes is essential for effective troubleshooting.
 
@@ -19,7 +19,7 @@ Below is a list of common error codes that developers may encounter when working
 | 76800  | Duplicate key.                                                                                    |
 | 75520  | <ol><li>Master key or Dukpt key has not injected.</li><li>Session key has not injected.</li></ol> |
 
-### Error Codes in C Interface
+## Error Codes in C Interface
 
 When dealing with error codes in the C interface, it's crucial to follow the steps outlined below to identify and address issues effectively. 1. Get the Absolute Value and Convert to HEX:
 
@@ -71,38 +71,38 @@ Suppose a C interface method returns 196609. Firstly, convert it to hex value (3
 
 **The latest unified definition：**
 
-| Hex Value | Decimal | Description                      |
-| --------- | ------- | -------------------------------- |
-| `0x00`    | 0       | Success                          |
-| `0x01`    | 1       | Operation not permitted          |
-| `0x02`    | 2       | Failed in integration check      |
-| `0x05`    | 5       | I/O error                        |
-| `0x08`    | 8       | Bad package format               |
-| `0x09`    | 9       | Bad command ID                   |
-| `0x0A`    | 10      | No child processes               |
-| `0x0C`    | 12      | Out of memory                    |
-| `0x0D`    | 13      | Permission denied                |
-| `0x10`    | 16      | Device or resource busy          |
-| `0x11`    | 17      | File exists                      |
-| `0x13`    | 19      | No such device                   |
-| `0x16`    | 22      | Invalid argument                 |
-| `0x21`    | 33      | Failed in authentication         |
-| `0x22`    | 34      | Result out of range              |
-| `0x26`    | 38      | Function not implemented         |
-| `0x27`    | 39      | No desired key                   |
-| `0x2C`    | 44      | Break the rule of sensitive data |
-| `0x35`    | 53      | Invalid request descriptor       |
-| `0x36`    | 54      | Compare two objects, not match   |
-| `0x38`    | 56      | Invalid request code             |
-| `0x39`    | 57      | Invalid slot                     |
-| `0x3D`    | 61      | No data available                |
-| `0x46`    | 70      | Communication error on send      |
-| `0x47`    | 71      | Protocol error                   |
-| `0x4A`    | 74      | Not a right data message         |
-| `0x5D`    | 93      | Protocol not supported           |
-| `0x6E`    | 110     | Connection timed out             |
-| `0x7A`    | 122     | Quota exceeded                   |
-| `0x7D`    | 125     | Operation canceled               |
+| Code(Hex) | Code(Hex) | Description                      |
+| --------- | --------- | -------------------------------- |
+| `0x00`    | 0         | Success                          |
+| `0x01`    | 1         | Operation not permitted          |
+| `0x02`    | 2         | Failed in integration check      |
+| `0x05`    | 5         | I/O error                        |
+| `0x08`    | 8         | Bad package format               |
+| `0x09`    | 9         | Bad command ID                   |
+| `0x0A`    | 10        | No child processes               |
+| `0x0C`    | 12        | Out of memory                    |
+| `0x0D`    | 13        | Permission denied                |
+| `0x10`    | 16        | Device or resource busy          |
+| `0x11`    | 17        | File exists                      |
+| `0x13`    | 19        | No such device                   |
+| `0x16`    | 22        | Invalid argument                 |
+| `0x21`    | 33        | Failed in authentication         |
+| `0x22`    | 34        | Result out of range              |
+| `0x26`    | 38        | Function not implemented         |
+| `0x27`    | 39        | No desired key                   |
+| `0x2C`    | 44        | Break the rule of sensitive data |
+| `0x35`    | 53        | Invalid request descriptor       |
+| `0x36`    | 54        | Compare two objects, not match   |
+| `0x38`    | 56        | Invalid request code             |
+| `0x39`    | 57        | Invalid slot                     |
+| `0x3D`    | 61        | No data available                |
+| `0x46`    | 70        | Communication error on send      |
+| `0x47`    | 71        | Protocol error                   |
+| `0x4A`    | 74        | Not a right data message         |
+| `0x5D`    | 93        | Protocol not supported           |
+| `0x6E`    | 110       | Connection timed out             |
+| `0x7A`    | 122       | Quota exceeded                   |
+| `0x7D`    | 125       | Operation canceled               |
 
 **MSR\[Old defination]**
 
