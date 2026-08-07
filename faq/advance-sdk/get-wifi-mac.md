@@ -25,16 +25,9 @@ Get Mac of Wifi.
 #### Snippet code
 
 ```java
-private ISystemDevice device;
-if (device == null) {
-  device = POSTerminalAdvance.getInstance().getSystemDevice();
-}
+IWifiDevice device = POSTerminalAdvance.getInstance().getSystemDevice().getNetworkManager().getWifiManager();
 device.open(context);
-device.getNetworkManager().open(context);
-device.getNetworkManager().getWifiManager().open(context);
-byte[] wifiMacByte = device.getNetworkManager().getWifiManager().getWifiMac();
-device.getNetworkManager().getWifiManager().close();
-device.getNetworkManager().close();
+byte[] wifiMacByte = device.getWifiMac();
 device.close();
 ```
 
