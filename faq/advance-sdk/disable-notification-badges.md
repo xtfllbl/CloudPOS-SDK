@@ -27,13 +27,10 @@ Show/Hide notification badges.
 ### Snippet Code
 
 ```java
-ISystemDevice systemDevice = POSTerminalAdvance.getInstance().getSystemDevice();
-systemDevice.open(this.mContext);
-IHomeDevice homeDevice = systemDevice.getHomeManager();
+IHomeDevice homeDevice = POSTerminalAdvance.getInstance().getSystemDevice().getHomeManager();
 homeDevice.open(this.mContext);
 homeDevice.setNotificationBadge(true);
 homeDevice.close();
-systemDevice.close();
 
 ```
 
