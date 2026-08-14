@@ -19,6 +19,7 @@
 2. dlus.wizarview.com\[141.148.131.11[![](<../../.gitbook/assets/image (5).png>)](https://www.ip2location.com/demo/141.148.131.11)] (port 443 8680）
 3. dluae.wizarview.com \[193.123.67.48[![](<../../.gitbook/assets/image (6).png>)](https://www.ip2location.com/demo/193.123.67.48)] (port 443 8680)
 4. dlsg.wizarview.com \[129.150.38.203[![](<../../.gitbook/assets/image (7).png>)](https://www.ip2location.com/demo/129.150.38.203)] (port 443 8680)
+5. dlde.wizarview.com \[92.5.127.207[![](<../../.gitbook/assets/image (7).png>)](https://www.ip2location.com/92.5.127.207)] (port 443)
 
 #### Monitor server:
 
