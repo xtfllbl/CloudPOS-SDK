@@ -12,6 +12,7 @@ To ensure optimal performance and compatibility, it is essential to use the late
 
 | Version  | Download                                                                                    | Release Time |
 | -------- | ------------------------------------------------------------------------------------------- | ------------ |
+| 1.8.3.1  | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.3.1_Standard.aar)   | 2026-08-19   |
 | 1.8.2.33 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.2.33_Standard.aar)  | 2026-08-07   |
 | 1.8.2.31 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.2.31_Standard.aar)  | 2026-07-24   |
 | 1.8.2.14 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.2.14_Standard.aar)  | 2026-05-27   |
@@ -62,6 +63,10 @@ Note: For older versions, please contact WizarPOS.&#x20;
 The CloudPOS SDK AAR version number follows the format: Major.Minor.Stage.Build. The main version is updated for architectural changes, the minor version annually, the stage version monthly, and the build version for feature additions or bug fixes.
 
 ### Change History
+
+**1.8.3.1**
+
+* **Added: The interface for setting the Gateway IP when using Ethernet tethering.**
 
 **1.8.2.33**
 
