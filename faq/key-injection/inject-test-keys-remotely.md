@@ -15,7 +15,7 @@ This procedure is intended for testing terminals only and outlines the steps for
      * Alternatively, provide key information including the key index and key value. For DUKPT keys, also include the Key Serial Number (KSN) and the Initial Pin Encryption Key (IPEK).
 3.  Download and Install the Initialize Certificate APK:
 
-    * Download the [initialize certificate APK](https://ftp.wizarpos.com/advanceSDK/InitCertForRemotekeyInject_20250829.apk) to the terminal.
+    * Download the [initialize certificate APK](https://ftp.wizarpos.com/advanceSDK/init_democert_20260129.apk) to the terminal.
     * Run it to inject certificates.
 
     <figure><img src="../../.gitbook/assets/image (106).png" alt=""><figcaption></figcaption></figure>
