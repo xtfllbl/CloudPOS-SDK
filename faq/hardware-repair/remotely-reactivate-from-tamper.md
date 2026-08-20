@@ -10,8 +10,9 @@
 
 **Step-by-Step Guide:**
 
-1. **Log into TMS:** Access your Terminal Management System (TMS) account.
-2. **Setting Up Activation Mode:**
+1. Look up the terminal's group based on the serial number shown on the screen.
+2. **Log into TMS:** Access your Terminal Management System (TMS) account.
+3. **Setting Up Activation Mode:**
    * Navigate to **'Terminals > Group**' and select your desired group.
    * Click on **'Terminal Remote Activation Configure**'. This will open a configuration page.
 
