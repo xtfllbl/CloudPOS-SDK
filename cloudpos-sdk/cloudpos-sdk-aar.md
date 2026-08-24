@@ -6,13 +6,13 @@ Welcome to the CloudPOS SDK AAR documentation! This guide provides information o
 
 ### Getting Started
 
-Please read [the latest API Specs](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.2.33JavaDoc.zip) for the latest method descriptions.
+Please read [the latest API Specs](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.3.3JavaDoc.zip) for the latest method descriptions.
 
 To ensure optimal performance and compatibility, it is essential to use the latest CloudPOS SDK AAR version. The table below lists recent releases, including download links and release dates:
 
 | Version  | Download                                                                                    | Release Time |
 | -------- | ------------------------------------------------------------------------------------------- | ------------ |
-| 1.8.3.1  | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.3.1_Standard.aar)   | 2026-08-19   |
+| 1.8.3.3  | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.3.3_Standard.aar)   | 2026-08-24   |
 | 1.8.2.33 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.2.33_Standard.aar)  | 2026-08-07   |
 | 1.8.2.31 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.2.31_Standard.aar)  | 2026-07-24   |
 | 1.8.2.14 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.2.14_Standard.aar)  | 2026-05-27   |
@@ -64,9 +64,12 @@ The CloudPOS SDK AAR version number follows the format: Major.Minor.Stage.Build.
 
 ### Change History
 
-**1.8.3.1**
+**1.8.3.3**
 
 * **Added: The interface for setting the Gateway IP when using Ethernet tethering.**
+* **Added: Add interface for setting MID/TID**
+* **Added: Add overloaded URI interface to the silent install/update interface: installWithUri**
+* **Added: Support CBC mode encryption for user key**
 
 **1.8.2.33**
 
