@@ -15,22 +15,22 @@
 
 #### Download Servers:
 
-1. www.wizarview.com \[129.153.119.200 [![](<../../.gitbook/assets/image (4).png>)](https://www.ip2location.com/demo/129.153.119.200)] (port 443)
-2. dlus.wizarview.com\[141.148.131.11[![](<../../.gitbook/assets/image (5).png>)](https://www.ip2location.com/demo/141.148.131.11)] (port 443 8680）
-3. dluae.wizarview.com \[139.185.59.70[![](<../../.gitbook/assets/image (6).png>)](https://www.ip2location.com/demo/139.185.59.70)] (port 443 8680)
-4. dlsg.wizarview.com \[129.150.38.203[![](<../../.gitbook/assets/image (7).png>)](https://www.ip2location.com/demo/129.150.38.203)] (port 443 8680)
-5. dlde.wizarview.com \[92.5.127.207[![](<../../.gitbook/assets/image (7).png>)](https://www.ip2location.com/92.5.127.207)] (port 443)
-6. dlbj.wizarview.com \[101.200.185.126[![](<../../.gitbook/assets/image (7).png>)](https://www.ip2location.com/101.200.185.126)] (port 443)
-7. dlhk.wizarview.com\[47.91.186.174[![](<../../.gitbook/assets/image (7).png>)](https://www.ip2location.com/47.91.186.174)] (port 443 8680)
+* www.wizarview.com \[129.153.119.200 [![](<../../.gitbook/assets/image (4).png>)](https://www.ip2location.com/demo/129.153.119.200)] (port 443)
+* dlbj.wizarview.com \[101.200.185.126[![](<../../.gitbook/assets/image (7).png>)](https://www.ip2location.com/101.200.185.126)] (port 443)
+* dlde.wizarview.com \[92.5.127.207[![](<../../.gitbook/assets/image (7).png>)](https://www.ip2location.com/92.5.127.207)] (port 443)
+* dlhk.wizarview.com\[47.91.186.174[![](<../../.gitbook/assets/image (7).png>)](https://www.ip2location.com/47.91.186.174)] (port 443 8680)
+* dlsg.wizarview.com \[129.150.38.203[![](<../../.gitbook/assets/image (7).png>)](https://www.ip2location.com/demo/129.150.38.203)] (port 443 8680)
+* dluae.wizarview.com \[139.185.59.70[![](<../../.gitbook/assets/image (6).png>)](https://www.ip2location.com/demo/139.185.59.70)] (port 443 8680)
+* dlus.wizarview.com\[141.148.131.11[![](<../../.gitbook/assets/image (5).png>)](https://www.ip2location.com/demo/141.148.131.11)] (port 443 8680）
 
 #### Monitor server:
 
-* rmbj.wizarview.com \[101.200.185.126[![](<../../.gitbook/assets/image (7).png>)](../../)] (port 443)
+* rmbj.wizarview.com \[101.200.185.126[![](<../../.gitbook/assets/image (7).png>)](https://www.ip2location.com/101.200.185.126)] (port 443)
 * rmde.wizarview.com\[92.5.127.207[![](<../../.gitbook/assets/image (7).png>)](https://www.ip2location.com/92.5.127.207)] (port 443)
 * rmhk.wizaview.com\[47.91.186.174[![](<../../.gitbook/assets/image (7).png>)](https://www.ip2location.com/47.91.186.174)] (port 443)
-* rmus.wizarview.com\[141.148.131.11[![](<../../.gitbook/assets/image (7).png>)](https://www.ip2location.com/47.91.186.174)] (port 443)
-* rmuae.wizarview.com\[139.185.59.70[![](<../../.gitbook/assets/image (7).png>)](https://www.ip2location.com/demo/139.185.59.70)] (port 443)
 * rmsg.wizaview.com\[129.150.38.203[![](<../../.gitbook/assets/image (7).png>)](https://www.ip2location.com/demo/129.150.38.203)] (port 443)
+* rmuae.wizarview.com\[139.185.59.70[![](<../../.gitbook/assets/image (7).png>)](https://www.ip2location.com/demo/139.185.59.70)] (port 443)
+* rmus.wizarview.com\[141.148.131.11[![](<../../.gitbook/assets/image (7).png>)](https://www.ip2location.com/141.148.131.11)] (port 443)
 
 ### Ports Configuration
 
