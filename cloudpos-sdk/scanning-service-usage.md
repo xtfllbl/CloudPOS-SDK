@@ -10,6 +10,7 @@ The scanning service enables Android devices equipped with imaging hardware, suc
 
 | Version | Download                                                                                                                                                                        | Release Time |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| 4.0.49  | [CloudPOS\_Scanner\_API\_Reference](https://ftp.wizarpos.com/techsupport/ticket/CloudPOS_Scanner_API_Reference_EN.pdf)                                                          | 2026-09-18   |
 | 3.9.6   | [CloudposScannerUsage\_3.9.](https://ftp.wizarpos.com/barcodescan/CloudposScannerUsage_3.9.6_en.pdf)[6](https://ftp.wizarpos.com/barcodescan/CloudposScannerUsage_3.9.6_en.pdf) | 2024-04-11   |
 
 #### Demos
