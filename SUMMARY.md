@@ -37,6 +37,7 @@
     * [Understanding Image Print Gaps](faq/printer/understanding-image-print-gaps.md)
     * [Print with JavaScript](faq/printer/print-with-javascript.md)
     * [Verify Printer Paper Status](faq/printer/verify-printer-paper-status.md)
+    * [Best Practices for Printer](faq/printer/best-practices-for-printer.md)
   * [USB/Serial Port](faq/usb-serial-port/README.md)
     * [Install Terminal USB Drivers](faq/usb-serial-port/install-terminal-usb-drivers.md)
     * [Install UU Cable Driver](faq/usb-serial-port/install-uu-cable-driver.md)
