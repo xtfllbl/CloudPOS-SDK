@@ -6,12 +6,13 @@ Welcome to the CloudPOS SDK AAR documentation! This guide provides information o
 
 ### Getting Started
 
-Please read [the latest API Specs](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.3.3JavaDoc.zip) for the latest method descriptions.
+Please read [the latest API Specs](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.3.11JavaDoc.zip) for the latest method descriptions.
 
 To ensure optimal performance and compatibility, it is essential to use the latest CloudPOS SDK AAR version. The table below lists recent releases, including download links and release dates:
 
 | Version  | Download                                                                                    | Release Time |
 | -------- | ------------------------------------------------------------------------------------------- | ------------ |
+| 1.8.3.11 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.3.11_Standard.aar)  | 2026-09-22   |
 | 1.8.3.3  | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.3.3_Standard.aar)   | 2026-08-24   |
 | 1.8.2.33 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.2.33_Standard.aar)  | 2026-08-07   |
 | 1.8.2.31 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.2.31_Standard.aar)  | 2026-07-24   |
