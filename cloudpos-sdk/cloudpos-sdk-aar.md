@@ -6,13 +6,13 @@ Welcome to the CloudPOS SDK AAR documentation! This guide provides information o
 
 ### Getting Started
 
-Please read [the latest API Specs](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.3.11JavaDoc.zip) for the latest method descriptions.
+Please read [the latest API Specs](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.3.13JavaDoc.zip) for the latest method descriptions.
 
 To ensure optimal performance and compatibility, it is essential to use the latest CloudPOS SDK AAR version. The table below lists recent releases, including download links and release dates:
 
 | Version  | Download                                                                                    | Release Time |
 | -------- | ------------------------------------------------------------------------------------------- | ------------ |
-| 1.8.3.11 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.3.11_Standard.aar)  | 2026-09-22   |
+| 1.8.3.13 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.3.13_Standard.aar)  | 2026-09-24   |
 | 1.8.3.3  | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.3.3_Standard.aar)   | 2026-08-24   |
 | 1.8.2.33 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.2.33_Standard.aar)  | 2026-08-07   |
 | 1.8.2.31 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.2.31_Standard.aar)  | 2026-07-24   |
@@ -64,6 +64,15 @@ Note: For older versions, please contact WizarPOS.&#x20;
 The CloudPOS SDK AAR version number follows the format: Major.Minor.Stage.Build. The main version is updated for architectural changes, the minor version annually, the stage version monthly, and the build version for feature additions or bug fixes.
 
 ### Change History
+
+**1.8.3.13**
+
+* **Added:** The isTouchSupported method to the Q2Pro small-screen CustomerDisplayDevice:
+  * If a secondary screen exists: return true if touch is supported; return false if touch is not supported.
+  * If no secondary screen exists: throw an exception
+* **Added:** setMobileDNS and setMobileDNSOverrideEnabled to SystemAdvanceDevice.
+* **Added:** Dukpt2009 encryption and decryption both support using the Request Key.
+* **Added:** PassportReaderDevice for reading passport information.<br>
 
 **1.8.3.3**
 
