@@ -12,7 +12,7 @@ This guide details the methods to update the firmware on WizarPOS devices. Ensur
 
       <figure><img src="../../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>
 * Update Process:
-  * Power off the terminal and remove the battery.
+  * Power off the terminal.
   * Insert the prepared TF-Card into the terminal.
   * Power on the terminal. The update will commence automatically.
   * After the update, the terminal restarts. Verify the update by checking the 'Build number' and 'Kernel version' in 'Settings > About POS'.
