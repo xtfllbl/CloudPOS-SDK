@@ -10,7 +10,15 @@
 3. Declare a Receiver in the Manifest:
    * To enable your app to receive the boot completion broadcast, declare a broadcast receiver in your app's 'AndroidManifest.xml' file.
    * In the receiver, specify an intent filter for 'android.intent.action.BOOT\_COMPLETED'.
-4. Implement the Receiver:
+4.  Add permissions in the Manifest:
+
+    ```xml
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!--veriosn >= android 12-->
+    <uses-permission android:name="android.permission.START_ACTIVITIES_FROM_BACKGROUND" />
+    <uses-permission android:name="android.permission.START_FOREGROUND_SERVICES_FROM_BACKGROUND" />
+    ```
+5. Implement the Receiver:
    * In your receiver's code, define the actions to be taken when the boot completion broadcast is received. This could involve starting a service or launching an activity.
 
 Code Example:
