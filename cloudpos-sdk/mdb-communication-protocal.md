@@ -1,119 +1,64 @@
 # MDB Communication Protocal
 
-### Introduction
+### MDB protocol&#x20;
 
-This manual describes the serial communication protocol between Q3 Pos and MDB Interface Board, which will be short as “MIB” in follow content.
+MDB\_Version\_4-3
 
-The basic baud rate of serial port is set as 115200
+### Through `ExtBoardDevice`
 
-As the Q3 POS could be receive command from MIB as a slave, and also could send command to MIB as a master (e.g., send “begin session” command to inform the MDB VMC it’s ready for pay), a mode byte was added in serial frame to show if a command is slave response or a master request.
+**Interface:** `com.cloudpos.extboard.ExtBoardDevice`
 
-The request command always anticipates a response command except the checksum is wrong, or the incorrect serial format, in another word, the slave will use silence as a NAK. **Please refer to the** [**documentation** ](https://ftp.wizarpos.com/advanceSDK/MDB_interface_board_serial_protocol_20241226.pdf)**for specific commands and details.**
+**Associated Data Structures:** `MDBConfig`, `MDBOption`, `MDBEvent` (package `com.cloudpos.extboard.bean`)
 
-### Serial Protocol Packet Definition
+**Exceptions:** All methods throw `DeviceException` when communication fails, parameters are invalid, or the device is not ready.
 
-#### Serial Port Parameters
+Refer to the [interface documentation ](https://ftp.wizarpos.com/techsupport/software/ExtBoardDevice_MDB_Methods_Guide.pdf)for details.
+
+#### **Demo (`ExtBoardDevice`)**
+
+[Source Code for Terminal App](https://github.com/SmartPOSSamples/MDBTestForCloudSDK)
+
+[APK](https://ftp.wizarpos.com/techsupport/software/MDBTransaction-javadoc-2.0-release.apk)
+
+### Through `SerialPortDevice` (deprecated)
+
+This manual describes the serial communication protocol between the Q3 POS and the MDB Interface Board (hereinafter referred to as "MIB").
+
+The serial port operates at a default baud rate of **115200**.
+
+The Q3 POS can function in two roles:
+
+* **As a slave** — receiving commands from the MIB.
+* **As a master** — sending commands to the MIB (for example, sending a "begin session" command to notify the MDB VMC that it is ready for payment).
+
+To distinguish between these two roles, a **mode byte** is included in each serial frame. This byte indicates whether the command is a slave response or a master request.
+
+A request command always expects a response, unless:
+
+* the checksum is incorrect, or
+* the serial frame format is invalid.
+
+In such cases, the slave remains silent, which serves as a **NAK** (negative acknowledgment).
+
+Refer to the [documentation ](https://ftp.wizarpos.com/advanceSDK/MDB_interface_board_serial_protocol_20241226.pdf)for specific commands and details.
+
+#### Serial Protocol Packet Definition
+
+**Serial Port Parameters**
 
 * Baud rate: 115200
 * Data format: 8 bits, 1 stop bit, no parity
 
-#### Packet Format
+**Packet Format**
 
 * Start code: size 1 byte, always be 0x09
 * Length: size 1 byte, the number bytes of mode, data, and checksum.
 * Mode: size 1 byte, 0x00 means a request packet, 0x01 means a response packet, other value is prohibited.
 * Data: size n bytes, The data could be raw MDB commands, such as SETUP, VEND. Or the MIB control commands, such as GET VERSION, SET PARAMETER.
 * Checksum: size 1 byte, using LRC algorithm, input data were "mode, data"
-* End code: size 1 byte, always be 0x0D.<br>
+* End code: size 1 byte, always be 0x0D.
 
-### Specifics
-
-#### MDB Forwarding Mechanism
-
-When the MIB receive the VMC request, it removes the MDB mode bit, fill into serial packet data area, and transmit to serial port. In the opposite direction, the MIB receive the response, it unwraps the packet, and adding mode bit to the tail bytes, sending to the VMC, wait for the acknowledge.MIB will forward all the MDB cashless device commands (MDB spec section 7), except VMC request Poll.
-
-Example: RESET
-
-1. _VMC -> MIB:_ 0x110 0x10
-2. _MIB -> Q3V:_ 0x09 0x04 0x00 0x10 0x10 0xE0 0x0D
-3. Q3V _-> MIB:_ 0x09 0x04 0x01 0x00 0x00 0xFF 0x0D
-4. &#x20;_MIB -> VMC:_ 0x00 0x100
-5. _VMC -> MIB : 0x00_
-
-#### Application Notes
-
-* Focus on steps 2 and 3 in the MDB Forwarding Mechanism.
-* The application handles all cashless commands except POLL.
-* The cashless reader initiates a begin session command to notify the VMC when ready for a transaction.
-* MDB raw data includes its checksum byte, distinct from the serial frame checksum.
-
-### A Typical MDB Transaction Flow
-
-<figure><img src="../.gitbook/assets/Mdb_flow_chart (1).png" alt=""><figcaption></figcaption></figure>
-
-### Protocol Command Definition
-
-
-
-{% hint style="info" %}
-&#x20;Please refer to the [documentation ](https://ftp.wizarpos.com/advanceSDK/MDB_interface_board_serial_protocol_20241226.pdf)for specific commands and details.
-{% endhint %}
-
-#### Common MDB Forwarding Command
-
-This command forwards raw MDB commands (including MDB CHK), with the MDB mode bit removed.
-
-Request Packet:<br>
-
-| Mode        | Data                                                                 |
-| ----------- | -------------------------------------------------------------------- |
-| Request 00H | <p>VMC Request Command</p><p>(Reset,Setup,Reader,Expansion,Vend)</p> |
-
-Response Packet:<br>
-
-| Mode         | Data                |
-| ------------ | ------------------- |
-| Response 01H | Peripheral Response |
-
-Example:\
-MIB -> Q3V 09 04 00 10 10 E0 0D<br>
-
-Q3V -> MIB 09 04 01 00 00 FF 0D.
-
-#### Begin Session Command
-
-When the application is ready for a transaction, it issues a begin session command to inform the VMC master. This marks the beginning of a transaction. Balance amount is 2 bytes; if balance does not exist, fill with 0xFF. This command follows MDB spec definition but is initiated by the app.
-
-Request Packet:<br>
-
-| Mode        | Data                                                 |
-| ----------- | ---------------------------------------------------- |
-| Request 00H | Begin Session (03H) + Funds Available + MDB Checksum |
-
-Response Packet:<br>
-
-| Mode         | Data    |
-| ------------ | ------- |
-| Response 01H | ACK 00H |
-
-Example:\
-Q3V -> MIB 09 06 00 03 00 64 67 32 0d<br>
-
-MIB -> Q3V 09 03 01 00 ff 0d
-
-#### Session Cancel Request(0x04)
-
-The application can end a payment session by issuing a session cancel request command. The POS acts as the master during this command.
-
-Request Packet:<br>
-
-<table><thead><tr><th width="382">Mode</th><th>Data</th></tr></thead><tbody><tr><td>Request 00H</td><td>Cancel Session Req(04H) + Funds Available + Checksum</td></tr></tbody></table>
-
-Response Packet:<br>
-
-<table><thead><tr><th width="391">Mode</th><th>Data</th></tr></thead><tbody><tr><td>Response 01H</td><td>ACK 00H</td></tr></tbody></table>
-
-### Demo
+#### Demo (`SerialPortDevice`)
 
 [Source Code for Terminal App](https://github.com/SmartPOSSamples/MDBTest.git)
 
@@ -121,7 +66,7 @@ Response Packet:<br>
 
 ### Testing
 
-#### Test between terminal and VMC
+**Test between terminal and VMC**
 
 * Please get above Demo APK, install it to terminal.
 
@@ -139,7 +84,7 @@ _Click the MDB Start button to start the communication test._
 * [Testing Video: Connecting to a Coffee Machine](https://ftp.wizarpos.com/techsupport/ticket/connectcoffemachine.mp4).
 * [Testing Video: Connecting to an MDB Board](https://ftp.wizarpos.com/VideoIntroduce/mdbconnecttoVMCtesting.mp4).&#x20;
 
-#### Test between PC simulator and terminal
+**Test between PC simulator and terminal**
 
 There're two types of MDB RS232 box, please confirm which one are you testing:
 
