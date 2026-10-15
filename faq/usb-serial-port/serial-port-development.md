@@ -7,7 +7,7 @@ This guide provides a demonstration on how to develop an application that utiliz
 ### Demo and Tool Downloads:
 
 1. Serial Port Test Tool:
-   * Download the [Source APP](https://github.com/SmartPOSSamples/SerialportTestTool.git) and [APK](https://ftp.wizarpos.com/advanceSDK/SerialPortTestTool3.1.apk) for a serial port testing tool.
+   * Download the [Source APP](https://github.com/SmartPOSSamples/SerialportTestTool.git) and [APK](https://ftp.wizarpos.com/advanceSDK/serialtesttool_261015.apk) for a serial port testing tool.
 
 ### Best Practices for Reading Data from a Serial Port:
 
