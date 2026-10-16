@@ -12,6 +12,7 @@ To ensure optimal performance and compatibility, it is essential to use the late
 
 | Version  | Download                                                                                    | Release Time |
 | -------- | ------------------------------------------------------------------------------------------- | ------------ |
+| 1.8.4.6  | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.4.6_Standard.aar)   | 2026-10-16   |
 | 1.8.3.13 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.3.13_Standard.aar)  | 2026-09-24   |
 | 1.8.3.3  | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.3.3_Standard.aar)   | 2026-08-24   |
 | 1.8.2.33 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.2.33_Standard.aar)  | 2026-08-07   |
@@ -64,6 +65,10 @@ Note: For older versions, please contact WizarPOS.&#x20;
 The CloudPOS SDK AAR version number follows the format: Major.Minor.Stage.Build. The main version is updated for architectural changes, the minor version annually, the stage version monthly, and the build version for feature additions or bug fixes.
 
 ### Change History
+
+**1.8.4.6**
+
+* **Added:** API to re-launch the app. (Requires SystemLogServerExt version ≥ 3.0.1 or < 2.3.10)
 
 **1.8.3.13**
 
