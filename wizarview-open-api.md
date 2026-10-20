@@ -1,3 +1,8 @@
+---
+hidden: true
+noIndex: true
+---
+
 # Wizarview Open API
 
 ## WizarView OpenAPI Document V4.8
