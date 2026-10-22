@@ -11,3 +11,5 @@ This guide explains how to configure your application to serve as the default la
 2. Declare Necessary Permissions:
    * In your application, declare the permission 'android.permission.CLOUDPOS\_DEFAULT\_LAUNCHER'.
    * Adding this permission enables your application to automatically start as the default launcher on the device.
+
+### [Download Demo APK](https://ftp.wizarpos.com/techsupport/apks/DefaultLauncherTest-signed-20180322.apk)
