@@ -68,7 +68,7 @@ Developing a fully custom Remote Key Injection system from scratch is highly tim
 
 To accelerate your development and testing phase, WizarPOS provides a comprehensive RKI Demo System for your reference, which includes the following core components:
 
-* [cloudPOS\_remote\_key\_injection\_demo\_system manual](https://ftp.wizarpos.com/advanceSDK/wizarPOS_remote_key_injection_demo_system_20241217.pdf): A comprehensive reference manual that covers the entire demo architecture, certificate management mechanisms, and core cryptographic workflows.
+* [cloudPOS\_remote\_key\_injection\_demo\_system manual](https://ftp.wizarpos.com/advanceSDK/wizarPOS_remote_key_injection_demo_system_261028.pdf): A comprehensive reference manual that covers the entire demo architecture, certificate management mechanisms, and core cryptographic workflows.
 * [Terminal APP](https://github.com/SmartPOSSamples/InjectKeyDemo.git) : Provides the complete reference source code for the terminal-side client.
 * [Server Project](https://github.com/SmartPOSSamples/RemoteKeyInjectServer.git)Provides the complete reference source code for the backend server.
   * Includes `Remote_Key_Inject_Deployment.docx`: This deployment document is bundled within the server project package, providing step-by-step guidance on how to configure the server environment, deploy, and run the key-injection JAR application.
