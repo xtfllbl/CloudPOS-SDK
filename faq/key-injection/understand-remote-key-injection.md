@@ -46,7 +46,7 @@ This API allows the application to retrieve the authentication information buffe
 | Random         | 32                 | Fixed random number block used for anti-replay protection.                                             |
 | SN Length      | 1                  | Represents the actual length of the contents in the subsequent `SN` field.                             |
 | SN             | 31                 | Fixed buffer storing the device Serial Number (SN).                                                    |
-| Signature      | 256                | Fixed buffer storing the cryptographic signature of the payload.                                       |
+| Signature      | 256 or 512         | Fixed buffer storing the cryptographic signature of the payload.                                       |
 
 ```
 int importKeyInfo(in byte[] keyInfo);
@@ -59,7 +59,7 @@ This API allows the application to import the encrypted `KeyInfo` payload receiv
 | PubKeyH Length | 4                  | Little-endian integer. Represents the actual length of the contents in the subsequent `PubKeyH` field.                                              |
 | PubKeyH        | 4096               | Fixed buffer storing the Host public key inside a simple PEM-formatted certificate.                                                                 |
 | Random         | 32                 | Fixed random number block.                                                                                                                          |
-| Cipher KeyInfo | 256                | Fixed buffer containing the ciphertext of the key data, encrypted using the POS terminal's public key. _(See plaintext payload sub-formats below)_. |
+| Cipher KeyInfo | 256 or 512         | Fixed buffer containing the ciphertext of the key data, encrypted using the POS terminal's public key. _(See plaintext payload sub-formats below)_. |
 | Signature      | 256                | Fixed buffer storing the cryptographic signature of the combined `Random` + `Cipher KeyInfo` fields.                                                |
 
 ### Scenario 2: Systems Without an Existing Host Server
