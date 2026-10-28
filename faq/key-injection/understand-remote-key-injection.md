@@ -4,7 +4,7 @@
 
 ### Core document
 
-[cloudPOS\_remote\_key\_injection\_demo\_system manual](https://ftp.wizarpos.com/advanceSDK/wizarPOS_remote_key_injection_demo_system_20241217.pdf)
+[cloudPOS\_remote\_key\_injection\_demo\_system manual](https://ftp.wizarpos.com/advanceSDK/wizarPOS_remote_key_injection_demo_system_261028.pdf)
 
 ### Scenario 1: Integrating with an Existing Host Server
 
