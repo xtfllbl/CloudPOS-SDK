@@ -6,12 +6,13 @@ Welcome to the CloudPOS SDK AAR documentation! This guide provides information o
 
 ### Getting Started
 
-Please read [the latest API Specs](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.4.6JavaDoc.zip) for the latest method descriptions.
+Please read [the latest API Specs](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.4.18JavaDoc.zip) for the latest method descriptions.
 
 To ensure optimal performance and compatibility, it is essential to use the latest CloudPOS SDK AAR version. The table below lists recent releases, including download links and release dates:
 
 | Version  | Download                                                                                    | Release Time |
 | -------- | ------------------------------------------------------------------------------------------- | ------------ |
+| 1.8.4.18 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.4.18_Standard.aar)  | 2026-11-11   |
 | 1.8.4.6  | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.4.6_Standard.aar)   | 2026-10-16   |
 | 1.8.3.13 | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.3.13_Standard.aar)  | 2026-09-24   |
 | 1.8.3.3  | [CloudPOS SDK AAR](https://ftp.wizarpos.com/device/java/cloudpossdkV1.8.3.3_Standard.aar)   | 2026-08-24   |
@@ -65,6 +66,17 @@ Note: For older versions, please contact WizarPOS.&#x20;
 The CloudPOS SDK AAR version number follows the format: Major.Minor.Stage.Build. The main version is updated for architectural changes, the minor version annually, the stage version monthly, and the build version for feature additions or bug fixes.
 
 ### Change History
+
+**1.8.4.18**
+
+* **Added deprecated method `addToLockTaskAllowlist` .**
+* **Updated EMV implement.**
+* **Added `getProductName` method.**
+* **Added `getEMVLevel2xx` LOA method.**
+* **Fixed the return value of `Smartcard getProtocol()` .**
+* **Added detection API for printer statuses such as overheating.**
+* **Optimized the passport API.**
+* **Added API for setting the launcher workspace layout and wallpaper.**
 
 **1.8.4.6**
 
