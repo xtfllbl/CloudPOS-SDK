@@ -204,6 +204,7 @@
     * [Push Apps Using Tags](faq/tms-wizarview/push-apps-using-tags.md)
     * [Deploy AID/CAPK via TMS](faq/tms-wizarview/deploy-aid-capk-via-tms.md)
   * [EMV](faq/emv/README.md)
+    * [P2PE EMV PAN Encryption Integration Guide](faq/emv/p2pe-emv-pan-encryption-integration-guide.md)
     * [What's Tag91](faq/emv/whats-tag91.md)
     * [What's CAPK](faq/emv/whats-capk.md)
     * [Set Issuer Scripts](faq/emv/set-issuer-scripts.md)
