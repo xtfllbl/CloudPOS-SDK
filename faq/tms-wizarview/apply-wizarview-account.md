@@ -12,12 +12,9 @@ To apply for a WizarView account, please follow these steps:
      * Terminal Serial Numbers (if applicable): If you already own terminals, include their serial numbers. These will be added to your group upon account creation.
 2. Send an Email:
    * Compose an email with the above information.
-   * Address it to 'team.support@wizarpos.com'.
-3. CC the Email to WizarPOS Sales Staff:
-   * Make sure to CC (carbon copy) this email to your contact in the WizarPOS sales staff.
-   * Important: If the email is not CC’d to the sales staff, your application may not be processed.
-4. Await Confirmation:
-   * After sending the email, wait for a response from WizarView tech support or the sales team. They will confirm the creation of your account and guide you through the next steps.
+   * Address it to 'WizarPOS Sales Staff '.
+3. Await Confirmation:
+   * After sending the email, wait for a response from WizarView tech support, the sales team or the mail from [wizarview.admin@wizarpos.com](mailto:wizarview.admin@wizarpos.com). They will confirm the creation of your account and guide you through the next steps.
 
 
 
