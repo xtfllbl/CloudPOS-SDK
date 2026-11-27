@@ -51,7 +51,7 @@ Important Notice:  In the follow up keytool commands, the keystore name(\*.jks) 
     * Sales Person: Name of your WizarPOS contact.
     * Company Name: Your company's name.
     * Attachment: Include the CSR file.
-  * Send to: WizarPOS sales staff (add first), support@wizarpos.com, team.support@wizarpos.com.
+  * Send to: <mark style="color:$primary;">**support@wizarpos.com**</mark>— this is mandatory, WizarPOS sales staff , team.support@wizarpos.com.
 
 ### Import the Certificate Chain
 
